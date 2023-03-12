@@ -6,7 +6,7 @@ from typing import List
 
 HYPHEN_E_DOT = "-e ."  # Ignore the -e . from the file
 COMMENTED_REQS = r"^#.*"  # Ignore the commented requirements
-requirement_file_path = os.path.join("./", "requirements.txt")
+requirement_file_path = os.path.join(os.getcwd(), "requirements.txt")
 
 def get_requirements(file_path: str) -> List[str]:
     """
