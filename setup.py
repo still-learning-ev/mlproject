@@ -8,6 +8,7 @@ HYPHEN_E_DOT = "-e ."  # Ignore the -e . from the file
 COMMENTED_REQS = r"^#.*"  # Ignore the commented requirements
 requirement_file_path = os.path.join(os.getcwd(), "requirements.txt")
 
+
 def get_requirements(file_path: str) -> List[str]:
     """
     This file is going to read the requirements.txt file
@@ -22,8 +23,7 @@ def get_requirements(file_path: str) -> List[str]:
 
         # Remove the '\n' added after reading the requirements.txt
         # Add an empty string inplace of '\n'
-        requirements = [requirement.replace("\n", "") for requirement
-                        in requirements]
+        requirements = [requirement.replace("\n", "") for requirement in requirements]
 
         # Remove the '-e .' from requirements.txt from return list
         if HYPHEN_E_DOT in requirements:

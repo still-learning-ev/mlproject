@@ -9,10 +9,9 @@ from src.logger import logging
 from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
 
-def save_object(obj_file_path, obj):
 
+def save_object(obj_file_path, obj):
     try:
-        
         dir_path = os.path.dirname(obj_file_path)
 
         os.makedirs(dir_path, exist_ok=True)
@@ -24,12 +23,11 @@ def save_object(obj_file_path, obj):
 
         logging.info(f"Successfully saved the pickle file to path {obj_file_path}")
 
-            
     except Exception as e:
         raise CustomException(e, sys)
-    
 
-def evaluate_models(X_train, y_train,X_test,y_test,models, param):
+
+def evaluate_models(X_train, y_train, X_test, y_test, models, param):
     try:
         report = {}
 
@@ -57,11 +55,11 @@ def evaluate_models(X_train, y_train,X_test,y_test,models, param):
 
     except Exception as e:
         raise CustomException(e, sys)
-    
+
 
 def load_object(file_path):
     try:
-        with open(file_path, 'rb') as f:
+        with open(file_path, "rb") as f:
             return dill.load(f)
     except Exception as e:
         raise CustomException(e, sys)

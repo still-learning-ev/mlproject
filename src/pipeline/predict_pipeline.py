@@ -7,10 +7,11 @@ from src.logger import logging
 from src.utils import load_object
 from dataclasses import dataclass
 
+
 @dataclass
 class PredictConfig:
-    model_path='artifacts\model.pkl'
-    preprocessor_path='artifacts\preprocessor.pkl'
+    model_path = "artifacts\model.pkl"
+    preprocessor_path = "artifacts\preprocessor.pkl"
 
 
 class PredictPipeline:
@@ -19,21 +20,19 @@ class PredictPipeline:
         self.model_path = predict_config.model_path
         self.preprocessor_path = predict_config.preprocessor_path
 
-
-    def predict(self,features):
+    def predict(self, features):
         try:
-            model=load_object(file_path=self.model_path)
-            preprocessor=load_object(file_path=self.preprocessor_path)
-            data_scaled=preprocessor.transform(features)
-            preds=model.predict(data_scaled)
+            model = load_object(file_path=self.model_path)
+            preprocessor = load_object(file_path=self.preprocessor_path)
+            data_scaled = preprocessor.transform(features)
+            preds = model.predict(data_scaled)
             return preds
-        
+
         except Exception as e:
-            raise CustomException(e,sys)
+            raise CustomException(e, sys)
 
 
 class CustomData:
-
     def __init__(
         self,
         gender: str,
@@ -51,7 +50,6 @@ class CustomData:
         self.test_preparation_course = test_preparation_course
         self.reading_score = reading_score
         self.writing_score = writing_score
-
 
     def get_data_as_data_frame(self):
         try:

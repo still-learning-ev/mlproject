@@ -10,7 +10,7 @@ LOG_FILE = (
 )
 
 
-logs_path = os.path.join(os.getcwd(), 'logs', f"{date.today()}")
+logs_path = os.path.join(os.getcwd(), "logs", f"{date.today()}")
 os.makedirs(logs_path, exist_ok=True)
 
 LOG_FILE_PATH = os.path.join(logs_path, LOG_FILE)
