@@ -1,0 +1,10 @@
+[ 2023-03-13 23:24:26,058 ] 26 root - INFO - Entered the data ingestion method
+[ 2023-03-13 23:24:26,058 ] 30 root - INFO - Read the dataset as dataframe
+[ 2023-03-13 23:24:26,079 ] 36 root - INFO - Train test split initiated
+[ 2023-03-13 23:24:26,086 ] 43 root - INFO - Data ingestion is completed
+[ 2023-03-13 23:24:26,103 ] 80 root - INFO - Read train and test data
+[ 2023-03-13 23:24:26,103 ] 81 root - INFO - Obtaining transformer object
+[ 2023-03-13 23:24:26,103 ] 59 root - INFO - Pipeline created for numerical and categorical columns
+[ 2023-03-13 23:24:26,104 ] 85 root - INFO - Obatined transformation object
+[ 2023-03-13 23:24:26,105 ] 96 root - INFO - Applying preprocessing to the training and testing dataframes
+[ 2023-03-13 23:24:26,108 ] 123 root - INFO - Encountered some problem

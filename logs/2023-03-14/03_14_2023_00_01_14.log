@@ -1,0 +1,16 @@
+[ 2023-03-14 00:01:14,654 ] 28 root - INFO - Entered the data ingestion method
+[ 2023-03-14 00:01:14,660 ] 32 root - INFO - Read the dataset as dataframe
+[ 2023-03-14 00:01:14,667 ] 40 root - INFO - Train test split initiated
+[ 2023-03-14 00:01:14,674 ] 51 root - INFO - Data ingestion is completed
+[ 2023-03-14 00:01:14,690 ] 77 root - INFO - Read train and test data completed
+[ 2023-03-14 00:01:14,690 ] 79 root - INFO - Obtaining preprocessing object
+[ 2023-03-14 00:01:14,690 ] 57 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2023-03-14 00:01:14,691 ] 58 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2023-03-14 00:01:14,694 ] 92 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-03-14 00:01:14,712 ] 106 root - INFO - Saved preprocessing object.
+[ 2023-03-14 00:01:14,712 ] 19 root - INFO - Trying to save the pickle file to path artifacts\proprocessor.pkl
+[ 2023-03-14 00:01:14,716 ] 24 root - INFO - Successfully saved the pickle file to path artifacts\proprocessor.pkl
+[ 2023-03-14 00:01:14,716 ] 27 root - INFO - Split training and test input data
+[ 2023-03-14 00:01:15,736 ] 65 root - INFO - Best model found 0.8795158595242263, with r2_score 0.8795158595242263
+[ 2023-03-14 00:01:15,737 ] 19 root - INFO - Trying to save the pickle file to path artifacts\model.pkl
+[ 2023-03-14 00:01:15,738 ] 24 root - INFO - Successfully saved the pickle file to path artifacts\model.pkl
